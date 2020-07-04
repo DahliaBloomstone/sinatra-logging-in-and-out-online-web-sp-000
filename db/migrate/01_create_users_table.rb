@@ -11,4 +11,5 @@ class CreateUsersTable < ActiveRecord::Migration[5.1]
 end
 
 
-#create users table to inherit active record 
+#create users table to inherit active record
+#
