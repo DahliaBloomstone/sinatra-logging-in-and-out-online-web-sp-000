@@ -26,7 +26,8 @@ class ApplicationController < Sinatra::Base
        erb :error
   end
 
-
+#get request for user account. Matching the current user to the user ID.
+#if the current user has an account, show the account, if not show the error page. 
   get '/account' do
     @current_user = User.find_by_id(session[:user_id])
        if @current_user
