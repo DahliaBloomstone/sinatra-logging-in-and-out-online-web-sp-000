@@ -9,6 +9,7 @@ class ApplicationController < Sinatra::Base
     set :session_secret, "secret"
   end
 
+#contains a form for the user to log in
   get '/' do
     erb :index
   end
