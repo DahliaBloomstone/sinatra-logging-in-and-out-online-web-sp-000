@@ -10,8 +10,8 @@ class ApplicationController < Sinatra::Base
     erb :index
   end
 
-#recieving post request when user hits login
-#grabs users info from the params hash. Is user that is loggin in in the database? matching passwords to see. 
+#recieving post request when user hits login. Finding user based on their username
+#grabs users info from the params hash. Is user that is loggin in in the database? matching passwords to see.
   post '/login' do
     @user = User.find_by(:username => params[:username])
        if @user != nil && @user.password == params[:password]
