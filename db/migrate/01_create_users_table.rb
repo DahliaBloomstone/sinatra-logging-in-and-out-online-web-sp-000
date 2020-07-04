@@ -13,3 +13,5 @@ end
 
 #create users table to inherit active record
 #table has user username, password, balance, and timestamps
+#To create table: 1. run rake db:create_migration NAME= create_users_table, 2. rename file, 3. create class/class method
+#To add table to schema: run rake db:migrate
