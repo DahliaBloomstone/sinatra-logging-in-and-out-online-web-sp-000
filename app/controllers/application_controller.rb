@@ -11,8 +11,9 @@ class ApplicationController < Sinatra::Base
   end
 
 #recieving post request when user hits login. Finding user based on their username
-#session is users ID, redirects them to the account route (redirect to) use ERB to display the user's data on the page 
+#session is users ID, redirects them to the account route (redirect to) use ERB to display the user's data on the page
 #grabs users info from the params hash. Is user that is loggin in in the database? matching passwords to see.
+#if there is no match, render the error page. 
   post '/login' do
     @user = User.find_by(:username => params[:username])
        if @user != nil && @user.password == params[:password]
