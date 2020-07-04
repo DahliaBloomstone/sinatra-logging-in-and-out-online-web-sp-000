@@ -1,3 +1,6 @@
+#get/post = a working form that accepts input and sends a dynamic response.
+#params object = hash that returns text a user types dynamically
+
 require_relative '../../config/environment'
 class ApplicationController < Sinatra::Base
   configure do
@@ -22,6 +25,7 @@ class ApplicationController < Sinatra::Base
        end
        erb :error
   end
+
 
   get '/account' do
     @current_user = User.find_by_id(session[:user_id])
