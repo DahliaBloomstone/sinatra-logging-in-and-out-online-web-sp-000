@@ -12,4 +12,4 @@ end
 
 
 #create users table to inherit active record
-#
+#table has user username, password, balance, and timestamps
